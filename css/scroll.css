@@ -1,0 +1,144 @@
+/* header scene 1 */
+.header #header-text-area{
+   position:absolute;
+   left:0px;
+   transition: 1s ease;
+   opacity:0;
+}
+#header-text-area.fadein{
+   position:absolute;
+   left:100px;
+   opacity: 1;
+}
+
+.header #header-img-cont{
+    position:absolute;
+    right:-100px;
+    transition: 1s ease;
+    opacity: 0;
+}
+.header #header-img-cont.fadein{
+    position:absolute;
+    right:30px;
+    opacity: 1;
+}
+
+/* section content */
+
+/* g-about cont */
+.section #g-about{
+    position:relative;
+    left:-100px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #g-about.fadein{
+    position:relative;
+    left:0px;
+    opacity: 1;
+}
+
+
+/* why-g cont */
+.section #why-g{
+    position:relative;
+    right:-100px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #why-g.fadein{
+    position:relative;
+    right:0px;
+    opacity: 1;
+}
+
+
+.section #f-boxes{
+    position:relative;
+    right:-100px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #f-boxes.fadein{
+    position:relative;
+    right:0px;
+    opacity: 1;
+}
+
+.section #f-head{
+    position:relative;
+    top:-100px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #f-head.fadein{
+    position:relative;
+    top:0px;
+    opacity: 1;
+}
+
+.section #creator-img{
+    position:relative;
+    left:-200px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #creator-img.fadein{
+    position:relative;
+    left:0px;
+    opacity: 1;
+}
+
+
+.section #creator-cont{
+    position:relative;
+    right:-200px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #creator-cont.fadein{
+    position:relative;
+    right:0px;
+    opacity: 1;
+}
+
+
+.section #contact-head{
+    position:relative;
+    top:-100px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #contact-head.fadein{
+    position:relative;
+    top:5px;
+    opacity: 1;
+}
+
+
+
+.section #contact-form{
+    position:relative;
+    right:-200px;
+    transition: .3s ease;
+    opacity: 0;
+}
+.section #contact-form.fadein{
+    position:relative;
+    right:0px;
+    opacity: 1;
+}
+
+
+
+@media(max-width:1024px){
+    #header-text-area.fadein{
+        left:60px;
+    }
+}
+
+
+
+
+
+

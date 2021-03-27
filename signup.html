@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Monitor</title>
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- css files -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/Chart.css">
+    <!-- js files -->
+    <script src="js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="./js/Chart.min.js"></script>
+  </head>
+<body>
+
+<!-- dahboard navbar -->
+<nav class="g-navbar">
+  <a href="#" class="navbar-brand">
+    G<span class="deco">-Monitor</span>
+  </a>
+
+  <!-- div.navbarmain -->
+  <div class="navbar-main">
+    <div class="action">
+      <a href="#" class="logout-btn btn btn-danger">
+        <small>Logout</small>
+      </a>
+    </div>
+    <!-- user img -->
+    <div class="user-info">
+      <div class="user-img" 
+      style="background:url('../img/avatar.jpeg');background-size:cover;background-position:center;" id="g-user-pic"></div>
+    </div>
+
+    <!-- responsive -->
+    <div class="user-action" id="g-user-action">
+      <a href="logout.php" class="logout-btn">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="g-dashboard">
+  <div class="g-cont">
+
+    <!-- main area -->
+    <div class="g-main">
+      <!-- flex cards -->
+      <div class="g-cards">
+        <div class="card-cont">
+          <!-- repositories card -->
+          <div class="g-card repo">
+            <div class="clear-fix">
+              <div class="float-left">
+                <p>Repositories</p>
+                <h2 class="count">45</h2>
+              </div>
+              <div class="float-right">
+                <span class="g-icon"><ion-icon name="book" class="repo"></ion-icon></span>
+              </div>
+            </div>
+          </div>
+          <!-- followers count -->
+          <div class="g-card followers">
+            <div class="clear-fix">
+              <div class="float-left">
+                <p>Followers</p>
+                <h2 class="count">45</h2>
+              </div>
+              <div class="float-right">
+                <span class="g-icon"><ion-icon name="people-circle-outline" class="flwers"></span>
+              </div>
+            </div>
+          </div>
+          <!-- following counts -->
+          <div class="g-card repo">
+            <div class="clear-fix">
+              <div class="float-left">
+                <p>Following</p>
+                <h2 class="count">45</h2>
+              </div>
+              <div class="float-right">
+                <span class="g-icon flwing"><ion-icon name="people-outline" class="flwing"></span>
+              </div>
+            </div>
+          </div>
+          <!-- stars -->
+          <div class="g-card repo">
+            <div class="clear-fix">
+              <div class="float-left">
+                <p>Stars</p>
+                <h2 class="count">45</h2>
+              </div>
+              <div class="float-right">
+                <span class="g-icon"><ion-icon name="star-outline" class="stars"></ion-icon></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- g-main area -->
+      <div class="g-main-stat">
+        <div class="stat-cont">
+          <!-- user card -->
+          <div class="user-card">
+            <div class="user-rows clear-fix">
+              <div class="user-img-cont float-left">
+                <div class="user-img" style="background:url('./img/avatar.jpeg');background-position: center;background-size:cover;"></div>
+              </div>
+              <div class="user-info-cont float-right">
+                <!-- username and bio -->
+                <div class="user-info">
+                  <h4>John Doe</h4>
+                  <p class="skill">Software Developer</p>
+                  <p class="location"><ion-icon name="location-outline" class="fa text-danger"></ion-icon> IN PHILIPINES</p>
+                </div>
+                <!-- update bio -->
+                <div class="update-cont mt-5">
+                  <a href="#" class="update-btn">Update Bio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- todo list -->
+          <div class="todo-card" style="height:250px;">
+            <p>Add Task To Be Done.</p>
+            <hr>
+            <div class="form-cont">
+              <form action="" class="form-group form-inline">
+                <input type="text" name="taskinp" class="inp" id="taskinp" value="">
+                <input type="submit" value="Add" class="btn p-1 btn-default addbtn p-2">
+              </form>
+              <!-- task results -->
+              <div class="task-result">
+                <li class="list">
+                  <input type="checkbox" name="completed" checked class="completed">
+                  <span class="task-text ml-2" style="text-decoration:line-through;"><small>Lorem ipsum dolor, sit amet consectetur.</small></span>
+                  <small><span class="ml-3 delbtn btn btn-danger p-0"><ion-icon name="trash"></ion-icon></span></small> 
+                </li>
+                <!-- script to run if the input value is > 200 in length -->
+                <script>
+                  let taskinp = document.querySelector("#taskinp");
+                  taskinp.addEventListener("input", ()=>{
+                    let txtlength = taskinp.value.length;
+                    let max = 200;
+                    if(txtlength > max){
+                      taskinp.style.border = "2px solid red";
+                      alert("task text length cannot be > 200");
+                    }else{
+                      taskinp.style.border = "";
+                    }
+                  });
+
+                  // reset todo card container if height > 300
+                  let todocard = document.querySelector(".todo-card");
+                  
+                </script>
+              </div>
+            </div>
+          </div>
+          <!-- following -->
+          <div class="g-following">
+            <p class="fol-text">Following</p>
+            <hr>
+            <div class="following-user">
+              <div class="clear-fix">
+                <a href="#" clas="user_link">
+                  <div class="float-left p-2">
+                    <div class="user-img" style="background:url('./img/avatar.jpeg');background-position: center;background-size:cover;"></div>
+                  </div>
+                  <div class="float-right mt-2">
+                    <p>John Doe</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- followers -->
+          <div class="g-followers">
+            <div class="followers-tit">
+              <p class="fol-text">Followers</p>
+              <hr>
+            </div>
+            
+            <div class="followers-user">
+              <div class="clear-fix">
+                <a href="#" clas="user_link">
+                  <div class="float-left p-2">
+                    <div class="user-img" style="background:url('./img/avatar.jpeg');background-position: center;background-size:cover;"></div>
+                  </div>
+                  <div class="float-right mt-2">
+                    <p>John Doe</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- user repositories -->
+      <div class="repositories mt-3">
+        <div class="repo-card">
+          <div class="clear-fix">
+            <div class="float-left">
+              <p>Repositories</p>
+            </div>
+            <div class="float-right">
+              <input type="text" placeholder="Search repo" class="mb-1 search-inp">
+            </div>
+          </div>
+          <!-- repo tables -->
+          <table class="table table-dark table-hover">
+            <thead>
+                <th>Repository</th>
+                <th>Created Date</th>
+                <th>Star</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><small>Blog</small></td>
+                <td><small>23/02/2020</small></td>
+                <td>
+                  <span class="badge badge-success"><small>34</small> <ion-icon name="star-outline" class="fa"></ion-icon></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- charts section -->
+      <div class="g-chart-cont">
+        <div class="g-chart-1">
+          <p>Github Graph</p>
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+        <div class="g-chart-1">
+          <p>Github Graph</p>
+          <canvas id="myChart" width="250" height="250"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function chartLayout(){
+    let ctx = document.querySelector("#myChart");
+    ctx.getContext("2d");
+    let myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [
+          {
+            label: "# of Votes",
+            data: [1,2,3,4,5,6],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+  }
+  chartLayout()
+</script>
+</body>
+</html>

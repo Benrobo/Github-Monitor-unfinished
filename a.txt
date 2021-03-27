@@ -1,0 +1,17 @@
+    <!-- sidebar -->
+    <div class="g-sidebar">
+      <div class="user-img-cont">
+        <!-- user img -->
+        <div class="user-img" style="background:url('./img/avatar.jpeg');background-position: center;background-size:cover;"></div>
+      </div>
+      <!-- username and bio -->
+      <div class="user-info">
+        <h3>John Doe</h3>
+        <p class="skill">UI/UX/DESIGNER</p>
+        <p class="location"><ion-icon name="location-outline" class="fa text-danger"></ion-icon> IN PHILIPINES</p>
+      </div>
+      <!-- update bio -->
+      <div class="update-cont mt-5">
+        <a href="#" class="update-btn">Update Bio</a>
+      </div>
+    </div>

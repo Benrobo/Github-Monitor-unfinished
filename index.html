@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Monitor</title>
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- css files -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/scroll.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- js files -->
+    <script src="js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- <script src="./js/app.js"></script> -->
+    <script src="./js/pageScroll.js"></script>
+    <script src="./js/ScrollMagic.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar-main">
+            <!-- navbar brand -->
+            <div class="brand-cont">
+                <a href="#" class="brand">
+                <h5>G<span class="deco">-Monitor</span></h5>
+                </a>
+            </div>
+
+            <!-- navlinks -->
+            <div class="nav-link">
+                <ul class="navbar-list">
+                    <li class="list"><a href="index.php">Home</a></li>
+                    <li class="list"><a href="#about">About</a></li>
+                    <li class="list"><a href="#contact">Contact</a></li>
+                    <li class="register"><a href="">Register</a>
+                        <div class="dropdwn">
+                            <a href="login.php" class="drop-list">Login</a>
+                            <a href="signup.php" class="drop-list">Signup</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- responsive view -->
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="sidebar">
+            <div class="brand-cont">
+                <a href="#" class="brand">
+                <h5>G<span class="deco">-Monitor</span></h5>
+                </a>
+            </div>
+            <ul class="navbar-list">
+                    <li class="list"><a href="index.php">Home</a></li>
+                    <li class="list"><a href="#about">About</a></li>
+                    <li class="list"><a href="#contact">Contact</a></li>
+                    <li class="register"><a href="">Register</a>
+                        <div class="dropdwn">
+                            <a href="login.php" class="drop-list">Login</a>
+                            <a href="signup.php" class="drop-list">Signup</a>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <header class="header">
+        <div class="cont">
+            <div class="text-area" id="header-text-area">
+                <h3>G<span class="deco">-Monitor</span></h3>
+                <h6>Get realtime update of your github account using G-monitor app.</h6>
+                <br>
+                <br>
+                <div class="register-cont" id="reg-cont-btn">
+                    <a href="#" class="reg-btn">Register For Free</a>
+                </div>
+            </div>
+
+            <div class="img-cont" id="header-img-cont">
+                <div class="img-1 a"><div class="ovl"></div></div>
+                <div class="img-1 b"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- about gitmonitor -->
+
+    <section class="section">
+        <div class="section-main">
+            <!-- about g-monitor -->
+            <div class="g-about" id="g-about">
+                <h3>What is G<span class="deco">-Monitor</span></h3>
+                <div class="brbtm"></div>
+                <p class="body">
+                    G-Monitor as the name goes, it a web application which is use in monitoring and viewing of other github accounts displaying it in a well structured and nice layout by making use of the github api.
+                </p>
+                <p>
+                    With G <span class="deco">-monitor</span>, registered users are able to View his/her github accounts stat containing some <small>graphical chats, repositories, Followers, Following and issues and also a task management web app, where users could add, delete, edit their own tasks.</small>
+                </p>
+            </div>
+            <!-- why use g-monitor -->
+            <div class="why-g" id="why-g">
+                <h3>Why use G<span class="deco">-Monitor</span></h3>
+                <div class="brbtm"></div>
+                <br>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="icon-cont"><i class="fa fa-flash"></i></div>
+                        <div class="head">
+                            <p>Real Time Update</p>
+                        </div>
+                        <div class="cont">
+                            <small>With g-monitor users will be able to get a realtime update of their account.</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-cont"><i class="fa fa-envira"></i></div>
+                        <div class="head">
+                            <p>UI / UX</p>
+                        </div>
+                        <div class="cont">
+                            <small>Experience the best interface using g-monitor.</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-cont"><i class="fa fa-group"></i></div>
+                        <div class="head">
+                            <p>Social Connect</p>
+                        </div>
+                        <div class="cont">
+                            <small>Connect with other users on github.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- feautures -->
+        <div class="feautures">
+            <div class="f-cont">
+                <div id="f-head">
+                    <h3>Feautures of G<span class="deco">-Monitor</span></h3>
+                    <div class="brbtm"></div>
+                </div>
+                <div class="f-boxes"  id="f-boxes">
+                    <div class="box">
+                        <div class="main">
+                            <div class="f-icon"><ion-icon name="timer-outline" class="fa"></ion-icon></div>
+                            <br>
+                            <br>
+                            <div class="f-head">
+                                <p>Realtime Update.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="main">
+                            <div class="f-icon"><i class="fa fa-envira"></i></div>
+                            <br>
+                            <br>
+                            <div class="f-head">
+                                <p>UI / UX Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="main">
+                            <div class="f-icon"><ion-icon name="today-outline"></ion-icon></div>
+                            <br>
+                            <br>
+                            <div class="f-head">
+                                <p>Task Scheduler</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="main">
+                            <div class="f-icon"><i class="fa fa-group"></i></div>
+                            <br>
+                            <br>
+                            <div class="f-head">
+                                <p>Connect with others</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- creator -->
+        <div id="about"></div>
+        <div class="creator">
+            <div class="creator-card">
+                <div class="img" id="creator-img"></div>
+                <div class="cont" id="creator-cont">
+                    <h5>About G<span class="deco">-Monitor</span></h5>
+                    <!-- <hr> -->
+                    <div class="brbtm"></div>
+                    <p>G-Monitor was created by Benaiah purposely with the aim of getting update from my account by not visiting my github account. This web application was built using <i>Php, Mysql, Javascript & github api. </i>For more info about me please considering visiting the link below at the footer section or considering contacting me by using the form below.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact form -->
+        <div id="contact"></div>
+        <div class="contact-form">
+            <div id="contact-head">
+                <h5>Contact G<span class="deco">-Monitor</span></h5>
+                <div class="brbtm"></div>
+            </div>
+            <form action="#" id="contact-form" method="post" class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control mt-1">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control mt-1">
+                <label>Message</label>
+                <textarea name="msg" id="" cols="30" rows="6" class="form-control mt-1"></textarea>
+
+                <input type="submit" value="Send" name="submit" class="btn mt-2 btn-default btn-block">
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-cont">
+            <p>Created By </p>
+            <p class="ml-1"><a href="https://www.youtube.com/channel/UCVzQyQe-OxsBpQY1jA2xo3w"> Alumona Benaiah</a></p>
+            <div class="socials">
+                <a href="https://www.facebook.com/benaiah.alumona.5" target="_blank"><span class="fa fa-facebook-official f"></span></a>
+
+                <a href="https://www.youtube.com/channel/UCVzQyQe-OxsBpQY1jA2xo3w" target="_blank"><span class="fa fa-youtube-play y"></span></a>
+
+                <a href="https://github.com/Benrobo/" target="_blank"><span class="fa fa-github g"></span></a>
+                
+                <a href="https://www.instagram.com/_benrobo/" target="_blank"><span class="fa fa-instagram i"></span></a>
+                
+                <a href="https://www.twitter.com/AlumonaBenaiah/" target="_blank"><span class="fa fa-twitter"></span></a>
+          </div>
+            <p>copyright &copy; 2021.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
